@@ -8,6 +8,19 @@
   <link href="/static/css/style.css" rel="stylesheet">
 </head>
 <body>
+
+      <!-- Display flashed success messages -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div>
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
   
      <!-- Navigation bar with Logout button -->
   <nav class="navbar navbar-expand-lg">
@@ -151,20 +164,57 @@
           </div>
         
 
-    
-<!-- Service controle      - -->
 
-    <div class="card mb-4 support-card">
-      <div class="card-body">
-        <img src="/static/images/logo-docker.svg" alt="Docker Logo" class="logo">
-        <h5 class="card-title">Docker</h5>
-        <p class="card-text">Restart Services.</p>
-        <a href="https://aiagentui.{{ domain }}/restart/docker-vscode-1"  target="_blank" rel="noopener noreferrer" class="btn service-btn w-100">VSCode</a>
-        <a href="https://aiagentui.{{ domain }}/restart/docker-questdb-1" target="_blank" rel="noopener noreferrer" class="btn service-btn w-100 mt-2">QuestDB</a>
-        <a href="https://aiagentui.{{ domain }}/restart/docker-grafana-1" target="_blank" rel="noopener noreferrer" class="btn service-btn w-100 mt-2">Grafana</a>
-     
-      </div>
-    </div>
+  <!-- File Upload Input Block -->
+
+<!-- Error message -->
+<div id="error-message" style="color:red; display:none;"></div>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <img src="/static/images/logo-upload.svg" alt="Logo Upload" class="logo">
+    <h5 class="card-title">Upload a File</h5>
+    <div id="progress-container">
+      <div id="progress-bar" style="width: 0%; height: 20px; background-color: green;"></div>
+  </div>
+    <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" id="file" name="file" class="form-control mb-2" required>
+      <button type="button" onclick="validateFile(event)" class="btn service-btn w-100">Upload</button>
+    </form>
+  </div>
+</div>
+
+
+
+          <!-- DElete Uploaded File -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <img src="/static/images/logo-delete.svg" alt="Delete Logo" class="logo">
+              <h5 class="card-title">Delete Uploaded Files</h5>
+              <div id="file-list">
+                <!-- Dynamically generated list of uploaded files will go here -->
+              </div>
+            </div>
+          </div>
+
+    
+<!-- Service control -->
+
+<div class="card mb-4 support-card">
+  <div class="card-body">
+    <img src="/static/images/logo-docker.svg" alt="Docker Logo" class="logo">
+    <h5 class="card-title">Docker</h5>
+    <p class="card-text">Restart Services.</p>
+    <a href="https://aiagentui.{{ domain }}/restart/docker-vscode-1" target="_blank" rel="noopener noreferrer" class="btn service-btn w-100">VSCode</a>
+    <a href="https://aiagentui.{{ domain }}/restart/docker-questdb-1" target="_blank" rel="noopener noreferrer" class="btn service-btn w-100 mt-2">QuestDB</a>
+    <a href="https://aiagentui.{{ domain }}/restart/docker-grafana-1" target="_blank" rel="noopener noreferrer" class="btn service-btn w-100 mt-2">Grafana</a>
+    
+    <!-- Button for Nginx with JavaScript to trigger restart via AJAX -->
+    <button onclick="restartNginx()" class="btn service-btn w-100 mt-2">Nginx</button>
+
+    <div id="nginx-message" style="display:none; color: green;">Nginx is restarting. Please wait...</div>
+  </div>
+</div>
 
       <!-- Additional service links here -->
 
@@ -208,8 +258,7 @@
 
           <input type="text" id="chatbot-input" placeholder="Type a message..." class="form-control flex-grow-1">
           <button onclick="sendMessage()" class="btn">&#9658;</button>
-          <label for="file-upload" class="btn file-upload-btn">Upload CSV</label>
-          <input type="file" id="file-upload" class="d-none">
+          
         </div>
       </div>
     </div>
@@ -220,7 +269,7 @@
         <footer class="d-flex justify-content-between align-items-center p-3">
           <!-- Left side: Logo -->
           <div class="footer-logo">
-            <img src="/static/images/logo-aiagentlab.svg" alt="ai agent lab logo" class="logo" />
+            <img src="/static/images/logo-aiagentlab-gray.svg" alt="ai agent lab logo" class="logo" />
           </div>
         
           <!-- Center: Text -->

@@ -79,6 +79,19 @@ Start working with your notebooks and data, using the pre-installed tools and li
 
 
 
+### Hardware Requirements
+
+For optimal performance, the AI Agent Lab requires the following hardware setup:
+
+- **Server**: HP Microserver Gen8
+- **Processor**: Quad-core CPU
+- **Primary Storage**: 250GB SSD
+- **Memory**: 16GB of RAM
+- **Controler**: HP Smart Array P410
+- **Additional Storage**: 4x1TB RAID data storage
+- **Operating System**: Ubuntu 22.04 Server
+
+
 
 ## References
 
@@ -94,3 +107,5 @@ Start working with your notebooks and data, using the pre-installed tools and li
 - [Grafana - The open observability platform](https://grafana.com/)
 
 - [Langchain](https://python.langchain.com)
+ 
+- [MicroServer Gen8](https://www.storagereview.com/review/hp-proliant-microserver-gen8-review)
