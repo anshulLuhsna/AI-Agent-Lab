@@ -16,7 +16,7 @@
 6. Bouchard, L.-F., & Peters, L. (2024). Building LLMs for Production: Enhancing LLM Abilities and Reliability with Prompting, Fine-Tuning, and RAG. [https://www.amazon.com/Building-LLMs-Production-Reliability-Fine-Tuning/dp/B0D4FFPFW8](https://www.amazon.com/Building-LLMs-Production-Reliability-Fine-Tuning/dp/B0D4FFPFW8)
 
 ## Academic Papers
-1. 
+1. Position Paper: Agent AI Towards a Holistic Intelligence (https://arxiv.org/html/2403.00833v1)
 
 2. 
 
@@ -27,6 +27,8 @@
 2. AI Agents: A Comprehensive Guide on Understanding & Implementing Them (https://www.lyzr.ai/blog/ai-agents/)
 
 3. A Practical guide to building AI agents with Langgraph (https://adasci.org/a-practical-guide-to-building-ai-agents-with-langgraph/)
+
+4. Using LangSmith to test LLMs and AI applications (https://blog.logrocket.com/langsmith-test-llms-ai-applications/)
 
 ## Websites
 1. LangChain. (2023). *Documentation for LangChain: Building Applications with Large Language Models (LLMs)*. [https://langchain.com/docs](https://langchain.com/docs)
