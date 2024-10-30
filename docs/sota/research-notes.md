@@ -1,42 +1,3 @@
-## Testing LLM Apps Across the Development Cycle
-
-### **Why Does Testing LLM Apps Matter?**
-Testing LLM applications is crucial to guard against harmful or misleading responses, as well as to avoid embarrassing brand moments that could arise from their use. Ensuring reliability and accuracy in AI responses is essential for maintaining user trust and brand integrity.
-
-### **1. Adding Testing to the Design Phase**
-Integrating testing into the fundamental design of the LLM app promotes a "self-correction" approach. Applications with built-in error handling can utilize LLMs' ability to self-correct by executing tests within the application and feeding errors back to the LLM.
-
-**Use Cases:**
-- Self-corrective code generation
-- Self-corrective Retrieval-Augmented Generation (RAG) using LLM-as-judge evaluators
-
-### **2. Adding Testing to the Pre-Production Phase** (Offline Evaluation)
-The goal of pre-production testing is to measure application performance, ensure continuous improvement, and catch regressions in expected scenarios.
-
-**Steps:**
-- **Build a Dataset**: Collections of examples serving as inputs and (optionally) expected outputs for evaluating your LLM app. Datasets can be created through manual curation, past application logs, or synthetic data.
-  
-- **Define Evaluation Criteria**: Utilize three types of evaluators:
-  - Heuristic evaluators
-  - Human evaluators
-  - LLM-as-Judge evaluators
-  
-- **Regression Testing**: Due to model drift and sensitivity, regression testing is critical for LLM applications and should be conducted frequently. LangSmith supports these needs with a built-in comparison view.
-
-**Use Case:** Testing agents (Final response/Single step/Agent's trajectory)
-
-### **3. Adding Testing to the Post-Production Phase** (Online Testing)
-In post-production, a monitoring system helps detect when LLM app performance deviates from expectations, allowing for isolation of valuable failure cases.
-
-**Steps:**
-- **Set Up Tracing**: Gain visibility into production traffic by setting up tracing. LangSmith simplifies this process and provides insights into user input, application response, and all interim steps taken to arrive at the response. This detail aids in writing specific step assertions or debugging issues later.
-
-- **Collect Feedback in Production**: Gather feedback from users and LLM-as-Judge evaluators.
-
-**Use Case:** Evaluating a RAG application in production.
-
----
-
 ## Types of AI Agents
 
 AI agents can be categorized based on their functionalities:
@@ -98,7 +59,45 @@ With multiple agents interacting with sensitive data, ensuring privacy and secur
 Agents may exhibit variable performance due to factors like model drift or changes in data distribution. Continuous monitoring and regression testing are necessary to maintain consistent performance levels.
 
 ---
+## Testing LLM Apps Across the Development Cycle
 
+### **Why Does Testing LLM Apps Matter?**
+Testing LLM applications is crucial to guard against harmful or misleading responses, as well as to avoid embarrassing brand moments that could arise from their use. Ensuring reliability and accuracy in AI responses is essential for maintaining user trust and brand integrity.
+
+### **1. Adding Testing to the Design Phase**
+Integrating testing into the fundamental design of the LLM app promotes a "self-correction" approach. Applications with built-in error handling can utilize LLMs' ability to self-correct by executing tests within the application and feeding errors back to the LLM.
+
+**Use Cases:**
+- Self-corrective code generation
+- Self-corrective Retrieval-Augmented Generation (RAG) using LLM-as-judge evaluators
+
+### **2. Adding Testing to the Pre-Production Phase** (Offline Evaluation)
+The goal of pre-production testing is to measure application performance, ensure continuous improvement, and catch regressions in expected scenarios.
+
+**Steps:**
+- **Build a Dataset**: Collections of examples serving as inputs and (optionally) expected outputs for evaluating your LLM app. Datasets can be created through manual curation, past application logs, or synthetic data.
+  
+- **Define Evaluation Criteria**: Utilize three types of evaluators:
+  - Heuristic evaluators
+  - Human evaluators
+  - LLM-as-Judge evaluators
+  
+- **Regression Testing**: Due to model drift and sensitivity, regression testing is critical for LLM applications and should be conducted frequently. LangSmith supports these needs with a built-in comparison view.
+
+**Use Case:** Testing agents (Final response/Single step/Agent's trajectory)
+
+### **3. Adding Testing to the Post-Production Phase** (Online Testing)
+In post-production, a monitoring system helps detect when LLM app performance deviates from expectations, allowing for isolation of valuable failure cases.
+
+**Steps:**
+- **Set Up Tracing**: Gain visibility into production traffic by setting up tracing. LangSmith simplifies this process and provides insights into user input, application response, and all interim steps taken to arrive at the response. This detail aids in writing specific step assertions or debugging issues later.
+
+- **Collect Feedback in Production**: Gather feedback from users and LLM-as-Judge evaluators.
+
+**Use Case:** Evaluating a RAG application in production.
+
+---
+---
 ## Future Directions in AI Agent Development
 
 ### **1. Enhanced Learning Mechanisms**
@@ -115,6 +114,30 @@ AI agents should be integrated with emerging technologies such as IoT devices, b
 
 ---
 
+## Recent Research Contributions
+
+### 1. "Agent AI: Towards a Holistic Intelligence" 
+   - This paper emphasizes the integration of large foundation models into embodied systems known as Agent AI. It proposes an Agent Foundation Model that combines language proficiency with visual cognition and context memory for enhanced intelligent behavior across various domains like robotics and healthcare. The authors argue for a holistic approach that integrates components rather than reducing them into isolated subfields.
+   - Key insights include:
+     - The need for an interactive system capable of understanding human intent through multimodal interactions.
+     - The potential for Agent AI systems to evolve towards Artificial General Intelligence (AGI) through improved cognitive processes involving learning, memory, action, perception, planning, and reasoning.
+
+### 2. "LLM Multi-Agent Systems: Challenges and Open Problems"
+   - This paper discusses the challenges faced by multi-agent systems utilizing large language models (LLMs), including task allocation efficiency, robust reasoning capabilities, context management, and memory management.
+   - It highlights potential applications in blockchain technology while proposing future research directions focused on improving communication protocols among agents and integrating learning mechanisms like reinforcement learning from human feedback (RLHF).
+
+### 3. "Learning From Demonstration"
+   - This foundational paper explores methods for training intelligent agents using demonstration data from human experts through imitation learning (IL). It discusses various frameworks such as Behavioral Cloning (BC) that enable robots to mimic human actions effectively.
+   - The paper emphasizes leveraging large amounts of demonstration data combined with advanced models like transformers for improved generalization performance in robotic tasks.
+
+---
+
 ## Conclusion
 
-Testing LLM applications throughout their development cycle is essential for ensuring reliability and effectiveness. Understanding the various types of AI agents, their key components, challenges in development, and future directions will enable developers to create sophisticated systems capable of tackling complex tasks efficiently while maintaining user trust and security. As the field continues to evolve, ongoing research will be critical in addressing emerging challenges and leveraging new opportunities in AI agent development.
+Testing LLM applications throughout their development cycle is essential for ensuring reliability and effectiveness. Understanding the various types of AI agents, their key components, challenges in development, recent research contributions, and future directions will enable developers to create sophisticated systems capable of tackling complex tasks efficiently while maintaining user trust and security. As the field continues to evolve with new insights from recent studies on Agent AI and multi-agent systems, ongoing research will be critical in addressing emerging challenges while leveraging innovative opportunities in AI agent development.
+
+Citations:
+[1] https://arxiv.org/pdf/2402.03578.pdf
+[2] https://arxiv.org/html/2403.00833v1
+[3] https://arxiv.org/pdf/0910.2029.pdf
+[4] https://arxiv.org/pdf/0910.2029.pdf
