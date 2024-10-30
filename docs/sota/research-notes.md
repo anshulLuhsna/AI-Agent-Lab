@@ -44,14 +44,15 @@ Goal-Based Agents: Designed to achieve specific objectives by evaluating multipl
 Utility-Based Agents: Aim to maximize a utility function, assessing actions based on expected outcomes.
 Learning Agents: Improve their performance over time by learning from interactions and adapting their strategies accordingly
 
-#Key Components of AI Agents
+# Key Components of AI Agents
 To build effective AI agents, several core components are essential:
 Perception System: Gathers data from the environment using sensors and data sources.
 Decision-Making System: Analyzes input data using algorithms and models to determine the best course of action.
 Action System: Executes the chosen actions through actuators or other output mechanisms.
 Learning Element: Employs machine learning techniques to adapt and improve over time based on feedback from previous actions
 
-##Multi-agent systems (MAS) are frameworks in which multiple autonomous agents interact or collaborate to perform tasks, solve problems, or achieve specific goals. These systems leverage the capabilities of individual agents to handle complex tasks that would be challenging for a single agent to manage alone.
+## Multi-agent systems (MAS) 
+Multi-agent systems are frameworks in which multiple autonomous agents interact or collaborate to perform tasks, solve problems, or achieve specific goals. These systems leverage the capabilities of individual agents to handle complex tasks that would be challenging for a single agent to manage alone.
 Key Characteristics of Multi-Agent Systems
 Autonomy: Each agent operates independently, making its own decisions based on its objectives and knowledge.
 Interaction: Agents communicate and cooperate with one another, which can involve sharing information, negotiating, or competing.
