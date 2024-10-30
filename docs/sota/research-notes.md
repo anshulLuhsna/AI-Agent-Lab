@@ -36,3 +36,25 @@ issues later on.
 
 Use case: Evaluating a RAG application in production.
 
+## Types of AI Agents
+AI agents can be classified into several categories, each designed for specific tasks:
+Reactive Agents: Operate based on present stimuli without considering past experiences. They are effective for simple, repetitive tasks.
+Model-Based Agents: Maintain an internal model of the environment to make informed decisions based on both current and past information.
+Goal-Based Agents: Designed to achieve specific objectives by evaluating multiple courses of action.
+Utility-Based Agents: Aim to maximize a utility function, assessing actions based on expected outcomes.
+Learning Agents: Improve their performance over time by learning from interactions and adapting their strategies accordingly
+
+#Key Components of AI Agents
+To build effective AI agents, several core components are essential:
+Perception System: Gathers data from the environment using sensors and data sources.
+Decision-Making System: Analyzes input data using algorithms and models to determine the best course of action.
+Action System: Executes the chosen actions through actuators or other output mechanisms.
+Learning Element: Employs machine learning techniques to adapt and improve over time based on feedback from previous actions
+
+##Multi-agent systems (MAS) are frameworks in which multiple autonomous agents interact or collaborate to perform tasks, solve problems, or achieve specific goals. These systems leverage the capabilities of individual agents to handle complex tasks that would be challenging for a single agent to manage alone.
+Key Characteristics of Multi-Agent Systems
+Autonomy: Each agent operates independently, making its own decisions based on its objectives and knowledge.
+Interaction: Agents communicate and cooperate with one another, which can involve sharing information, negotiating, or competing.
+Coordination: Effective coordination among agents is essential for achieving common goals. This can occur through direct communication or through shared environments.
+Distributed Problem Solving: MAS are particularly suited for problems that require collective effort, as they can distribute tasks among agents based on their capabilities.
+
