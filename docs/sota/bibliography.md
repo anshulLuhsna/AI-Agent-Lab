@@ -24,9 +24,9 @@
 ## Articles
 1. Langchain (2024). *Definitive Guide to Testing LLM Applications*. AI Industry Reports. Available in the reports folder of the AI Agent Lab.
 
+2. AI Agents: A Comprehensive Guide on Understanding & Implementing Them (https://www.lyzr.ai/blog/ai-agents/)
 
-2. 
-
+3. A Practical guide to building AI agents with Langgraph (https://adasci.org/a-practical-guide-to-building-ai-agents-with-langgraph/)
 
 ## Websites
 1. LangChain. (2023). *Documentation for LangChain: Building Applications with Large Language Models (LLMs)*. [https://langchain.com/docs](https://langchain.com/docs)
