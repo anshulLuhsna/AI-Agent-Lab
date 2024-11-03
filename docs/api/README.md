@@ -1,6 +1,6 @@
 # AI Agent Integration with QuestDB, VSCode, and Grafana
 
-This repository contains the API definitions required to configure an AI Agent to interact with QuestDB, VSCode, and Grafana. Each integration allows the AI Agent to perform specific operations, such as querying databases, managing dashboards, and editing code. Below are the details of how the AI Agent interacts with each tool.
+This repository contains the API definitions required to configure an AI Agent to interact with QuestDB, VSCode, and Grafana. Each integration allows the AI Agent to perform specific operations, such as querying databases, managing dashboards, and editing code. Below are the details of how the AI Agent interacts with each tool, along with a brief description of the AI Agent API.
 
 ## Folder Structure
 ```
@@ -12,10 +12,10 @@ This repository contains the API definitions required to configure an AI Agent t
 │   ├── rest_api.md
 ├── vscode/
 │   ├── vscode_api.md
+├── ai_agent/
+│   ├── api_specs.md
 └── README.md
 ```
-
-
 
 ## QuestDB Integration
 
@@ -45,23 +45,50 @@ The AI Agent interacts with VSCode through the VSCode API, enabling it to edit, 
 - **Description**: This API provides the ability to automate tasks in VSCode, such as opening files, making edits, running code, and managing extensions.
 - **API Definition**: See [vscode_api.md](./vscode/vscode_api.md) for details.
 
+## AI Agent API Specifications
+
+The detailed API specifications for the AI Agent have been documented in a separate file. This includes comprehensive information on endpoints, request/response formats, and authentication mechanisms.
+
+- **API Specifications File**: See [api_specs.md](./ai_agent/api_specs.md) for detailed specifications.
+
 ## Getting Started
 
 1. **Clone the Repository**:
-
-
+   Follow the instructions in the README to clone this repository.
 
 2. **Review API Definitions**:
-- Navigate to the respective folders to review the API definitions for QuestDB, Grafana, and VSCode.
+   Navigate to the respective folders to review the API definitions for QuestDB, Grafana, VSCode, and the AI Agent.
 
 3. **Configure the AI Agent**:
-- Use the API definitions provided in each folder to configure your AI Agent for interaction with QuestDB, Grafana, and VSCode.
+   Use the API definitions provided in each folder to configure your AI Agent for interaction with QuestDB, Grafana, VSCode, and to utilize the AI Agent API.
 
 ## Contributing
 
 If you'd like to contribute to this repository, please fork the repo and submit a pull request. We welcome any improvements or additional API definitions that could enhance the AI Agent's capabilities.
 
 ## License
+
+This project is licensed under the MIT License - see the [LICENSE](../../LICENSE) file for details.
+
+---
+
+### ai_agent/api_specs.md
+
+This new file should contain the detailed API specifications for the AI Agent, including the following sections:
+
+1. **Base URL**
+2. **Endpoints Overview**
+3. **Request Formats**
+4. **Response Formats**
+5. **Authentication**
+
+This approach ensures that the main document remains concise while providing comprehensive technical details in a dedicated file, improving maintainability and clarity.
+
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/39445797/213a69b0-025d-4e3b-9cdf-a57c866f6601/paste.txt
+
+
+
 
 This project is licensed under the MIT License - see the [LICENSE](../../LICENSE) file for details.
 
