@@ -70,25 +70,4 @@ If you'd like to contribute to this repository, please fork the repo and submit 
 
 This project is licensed under the MIT License - see the [LICENSE](../../LICENSE) file for details.
 
----
-
-### ai_agent/api_specs.md
-
-This new file should contain the detailed API specifications for the AI Agent, including the following sections:
-
-1. **Base URL**
-2. **Endpoints Overview**
-3. **Request Formats**
-4. **Response Formats**
-5. **Authentication**
-
-This approach ensures that the main document remains concise while providing comprehensive technical details in a dedicated file, improving maintainability and clarity.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/39445797/213a69b0-025d-4e3b-9cdf-a57c866f6601/paste.txt
-
-
-
-
-This project is licensed under the MIT License - see the [LICENSE](../../LICENSE) file for details.
 
